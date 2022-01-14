@@ -11,3 +11,10 @@ Content-Type: application/json
 {
     "nome": "Asta"
 }
+###
+PUT http://localhost:8080/alunos?id=220d6a9c-08e2-4c0b-9f56-c596fa7bbfd0
+Content-Type: application/json
+
+{
+    "nome": "Yuno"
+}

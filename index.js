@@ -19,6 +19,19 @@ app.post('/alunos', (req, res) => {
     res.json({msg: `Aluno chamado ${aluno.nome} foi adicionado com sucesso!`})
 })
 
+app.put('/alunos', (req, res) => {
+    const id = req.query.id
+    if (id && alunos[id]){
+        const aluno = req.body
+        aluno.id = id
+        alunos[id] = aluno
+        res.json({msg: `Aluno chamado ${aluno.nome} foi atualizado com sucesso!`})
+    }else{
+        res.status(400).json({msg: "Aluno não encontrado!"})
+    }
+
+})
+
 app.get('/alunos', (req, res) => {
     res.json({alunos: Object.values(alunos)})
 })
