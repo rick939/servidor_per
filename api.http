@@ -12,9 +12,12 @@ Content-Type: application/json
     "nome": "Asta"
 }
 ###
-PUT http://localhost:8080/alunos?id=220d6a9c-08e2-4c0b-9f56-c596fa7bbfd0
+PUT http://localhost:8080/alunos?id=936e6975-a2ea-42aa-9224-5d1cbf27dea1
 Content-Type: application/json
 
 {
     "nome": "Yuno"
 }
+
+###
+DELETE http://localhost:8080/alunos?id=19d0b643-69e2-4414-923e-63694ecb2116
