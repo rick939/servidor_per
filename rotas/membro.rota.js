@@ -5,6 +5,12 @@ const express = require('express')
 const router = express.Router()
 const { v4: uuidv4 } = require('uuid')
 
+const Ajv = require('ajv')
+const ajv = new Ajv()
+const addFormats = require('ajv-formats')
+const membroSchema = require('../schemas/membro.schema')
+addFormats(ajv)
+
 const membros = {}
 
 router.get('/', (req, res) => {
@@ -17,11 +23,21 @@ router.get('/:id', (req, res) => {
 
 router.post('/', (req, res) => {
     const membro = req.body
-    const idMembro = uuidv4()
-    // console.log(aluno)
-    membro.id = idMembro
-    membros[idMembro] = membro
-    res.json({ msg: `Membro chamado: ${membro.nome} foi adicionado com sucesso!` })
+
+    //validate
+    const validate = ajv.compile(membroSchema)
+    const valid = validate(membro)
+    
+    if (valid) {
+        const idMembro = uuidv4()
+        // console.log(aluno)
+        membro.id = idMembro
+        membros[idMembro] = membro
+        res.json({ msg: `Membro chamado: ${membro.nome} foi adicionado com sucesso!` })
+    } else {
+        res.status(400).json({msg: "Dados inválidos", errors: validate.errors })
+    }
+    
 })
 
 router.put('/', (req, res) => {
