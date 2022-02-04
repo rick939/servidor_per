@@ -2,7 +2,7 @@ GET http://localhost:8080/
 
 ###
 
-GET  http://localhost:8080/membros/001b1cf7-7ab7-4236-931c-f2d66783d9d6
+GET  http://localhost:8080/membros/393c4662-3543-4f61-87c0-8bc7529631a2
 
 ###
 GET http://localhost:8080/membros
@@ -13,7 +13,8 @@ Content-Type: application/json
 
 {
     "nome": "Noele",
-    "magia": "Agua"
+    "magia": "Agua",
+    "esquadrao": "Touros Negros"
 }
 ###
 PUT http://localhost:8080/membros?id=fb35cc70-99e9-40b5-b811-f434428c0b94
