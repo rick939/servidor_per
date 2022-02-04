@@ -1,0 +1,29 @@
+GET http://localhost:8080/
+
+###
+
+GET http://localhost:8080/esquadrao/
+
+###
+
+GET  http://localhost:8080/esquadrao
+
+###
+
+POST http://localhost:8080/esquadrao
+Content-Type: application/json
+
+{
+    "nome": "Touros Negros"
+}
+
+###
+PUT http://localhost:8080/esquadrao?id=01699980-0e37-4d23-9836-210d7337c65e
+Content-Type: application/json
+
+{
+    "nome": "Aguias de Prata"
+}
+
+###
+DELETE http://localhost:8080/esquadrao?id=b34a6b71-323c-477d-b764-ee4a8c6e4dfc
