@@ -3,7 +3,8 @@ module.exports = {
     properties: {
         nome: {type: "string"},
         magia: {type: "string"},
+        ranking: {type: "string"}
     },
-    required: ["nome", "magia"],
+    required: ["nome", "magia","ranking"],
     additionalProperties: false
 }
