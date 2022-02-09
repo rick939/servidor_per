@@ -24,3 +24,8 @@ Eu usei a biblioteca chamada uuid que permite criar identificadores únicos univ
 Para instalar essa biblioteca execute:
 
 $ npm install uuid --save
+
+
+npx sequelize-cli model:generate --name Esquadrao --attributes nome:string
+
+npx sequelize-cli model:generate --name Membros --attributes nome:string,magia:string,ranking:string
