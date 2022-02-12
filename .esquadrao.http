@@ -2,7 +2,7 @@ GET http://localhost:8080/
 
 ###
 
-GET http://localhost:8080/esquadrao/
+GET http://localhost:8080/esquadrao/1
 
 ###
 
@@ -14,16 +14,16 @@ POST http://localhost:8080/esquadrao
 Content-Type: application/json
 
 {
-    "nome": "Touros Negros"
+    "nome": "Cervo Ciano"
 }
 
 ###
-PUT http://localhost:8080/esquadrao?id=417a118c-7994-4c76-bccd-43e9acee384c
+PUT http://localhost:8080/esquadrao?id=4
 Content-Type: application/json
 
 {
-    "nome": "Aguias de Prata"
+    "nome": "Alvorecer Dourado"
 }
 
 ###
-DELETE http://localhost:8080/esquadrao?id=b34a6b71-323c-477d-b764-ee4a8c6e4dfc
+DELETE http://localhost:8080/esquadrao?id=3

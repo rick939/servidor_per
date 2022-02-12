@@ -2,7 +2,7 @@ GET http://localhost:8080/
 
 ###
 
-GET  http://localhost:8080/membros/5a7ecefb-4138-4c0e-8b8d-ef72578058d2
+GET  http://localhost:8080/membros/2
 
 ###
 GET http://localhost:8080/membros
@@ -12,21 +12,21 @@ POST http://localhost:8080/membros
 Content-Type: application/json
 
 {
-    "nome": "Noele",
-    "magia": "Agua",
-    "ranking": "Capitão"
+    "nome": "Asta",
+    "magia": "Anti-Magia",
+    "ranking": "Cavaleiro"
     
 }
 ###
-PUT http://localhost:8080/membros?id=e08e8557-1004-44d8-aa80-b83d5def4959
+PUT http://localhost:8080/membros?id=5
 Content-Type: application/json
 
 {
-    "nome": "Nozel",
-    "magia": "Merculio",
+    "nome": "Luke",
+    "magia": "Raio",
     "ranking": "Cavaleiro"
 
 }
 
 ###
-DELETE http://localhost:8080/membros?id=1b39cc7b-c475-47cf-a783-3b9e71963104
+DELETE http://localhost:8080/membros?id=6

@@ -17,5 +17,4 @@ app.listen(8080, () => {
 })
 
 /*
-https://www.youtube.com/watch?v=a0CKxlL40DE&list=TLPQMjUwMTIwMjIZyJ_vMvnEdQ&index=2
 */
