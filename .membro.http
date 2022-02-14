@@ -2,7 +2,7 @@ GET http://localhost:8080/
 
 ###
 
-GET  http://localhost:8080/membros/2
+GET  http://localhost:8080/membros/1
 
 ###
 GET http://localhost:8080/membros
