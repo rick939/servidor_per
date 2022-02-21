@@ -22,6 +22,7 @@ router.get('/:id', async (req, res) => {
 
 router.post('/', async (req, res) => {
     const squad = await Esquadrao.create(req.body)
+    console.log(`Esquadrao chamado: ${squad.nome}`)
     res.json({ msg: `Esquadrao chamado: ${squad.nome} foi adicionado com sucesso!` })
 })
 

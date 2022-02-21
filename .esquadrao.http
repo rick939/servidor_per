@@ -14,11 +14,11 @@ POST http://localhost:8080/esquadrao
 Content-Type: application/json
 
 {
-    "nome": "Cervo Ciano"
+    "nome": "Touros Negros"
 }
 
 ###
-PUT http://localhost:8080/esquadrao?id=4
+PUT http://localhost:8080/esquadrao?id=2
 Content-Type: application/json
 
 {

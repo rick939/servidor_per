@@ -12,9 +12,10 @@ POST http://localhost:8080/membros
 Content-Type: application/json
 
 {
-    "nome": "Asta",
-    "magia": "Anti-Magia",
-    "ranking": "Cavaleiro"
+    "nome": "Noelle",
+    "magia": "Agua",
+    "ranking": "Cavaleira",
+    "tmId": 3
     
 }
 ###

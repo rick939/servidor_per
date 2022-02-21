@@ -11,12 +11,14 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       // define association here
+      Membros.belongsTo(models.Esquadrao, {foreignKey: 'tmId'} )
     }
   }
   Membros.init({
     nome: DataTypes.STRING,
     magia: DataTypes.STRING,
-    ranking: DataTypes.STRING
+    ranking: DataTypes.STRING,
+    tmId: DataTypes.INTEGER
   }, {
     sequelize,
     modelName: 'Membros',
