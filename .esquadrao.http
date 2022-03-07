@@ -14,7 +14,7 @@ POST http://localhost:8080/esquadrao
 Content-Type: application/json
 
 {
-    "nome": "Touros Negros"
+    "nome": "Aguias de Pratas"
 }
 
 ###
