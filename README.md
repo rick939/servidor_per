@@ -1,9 +1,11 @@
-# API Criada com o node.js
+# APIs Criada com o node.js
  
-Primeiro projeto que eu fiz commitando no vs code, A ideia foi que eu assistir o anime e me chamou muita atenção, não encontrei nenhuma API disponivel dele.
-O codigo foi desenvolvido com a base no que estava sendo estudado em aula.
- 
----
+Primeiro projeto que eu fiz commitando no vs code, A ideia veio quando que eu assistir o anime e me chamou muita atenção, não encontrei nenhuma API disponivel dele.
+O codigo foi desenvolvido com a base com o que eu estudei em aula.
+
+*O README foi criado com algumas informações do material do curso de Desenvolvimento Back-End.*
+--- 
+
 ## Iniciando o projeto
  
 O primeiro comando foi para iniciar o npm
@@ -28,6 +30,7 @@ O comando para instalar o Express:
  
  
 ### O Nodemon
+
 O Nodemon é uma biblioteca que facilita o processo de desenvolvimento através do monitoramento dos arquivos do programa. Ao sinal de alguma mudança, o nodemon recarrega o sistema tornando a programação mais produtiva.
  
 O comando para instalar o Nodemon:
@@ -98,10 +101,12 @@ Para iniciar, execute:
  
 Ele é um servidor criado com o Node.js, express e com o Sequelize.
  
- 
+```
 npx sequelize-cli model:generate --name Esquadrao --attributes nome:string
-
+```
+```
 npx sequelize-cli model:generate --name Membros --attributes nome:string,magia:string,ranking:string
+```
 
 Apesar de funcional, o uso dos drivers diretamente deixa as aplicações dependentes dos fornecedores dos bancos de dados. Esse problema é abordado por fornecedores de ORM (Object Relational Mapper), que são ferramentas que buscam abstrair do desenvolvedor os aspectos internos de cada banco de dados. Para isso, os ORMs fornecem uma camada de alto nível para acesso aos dados permitindo que a decisão de qual banco utilizar possa ser tomada a posteriori.
 
@@ -110,29 +115,7 @@ Neste curso, utilizaremos o ORM Sequelize, que nos auxiliará em toda comunicaç
 
 Para executar todas as migrações pendentes, digite o seguinte comando:
 
-$ npx sequelize-cli db:migrate
+```
+ npx sequelize-cli db:migrate
+```
 
-Migrations
-
-'use strict';
-
-module.exports = {
-  async up (queryInterface, Sequelize) {
-    
-    return queryInterface.addColumn('Membros', 'esquadraoId', {
-      type: Sequelize.INTEGER,
-      references: {
-        model: 'Esquadrao',
-        key: 'id'
-      },
-      onUpdate: 'CASCADE',
-      onDelete: 'SET NULL'
-    })
-
-  },
-
-  async down (queryInterface, Sequelize) {
-    return queryInterface.removeColumn('Membros', 'esquadraoId');
-    
-  }
-};
