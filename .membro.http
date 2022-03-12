@@ -14,12 +14,10 @@ Content-Type: application/json
 {
     "nome": "Noelle",
     "magia": "Agua",
-    "ranking": "Cavaleira",
-    "tmId": 3
-    
+    "ranking": "Cavaleira"
 }
 ###
-PUT http://localhost:8080/membros?id=5
+PUT http://localhost:8080/membros?id=2
 Content-Type: application/json
 
 {
@@ -30,4 +28,4 @@ Content-Type: application/json
 }
 
 ###
-DELETE http://localhost:8080/membros?id=6
+DELETE http://localhost:8080/membros?id=3
