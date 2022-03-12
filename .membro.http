@@ -12,9 +12,9 @@ POST http://localhost:8080/membros
 Content-Type: application/json
 
 {
-    "nome": "Noelle",
-    "magia": "Agua",
-    "ranking": "Cavaleira"
+    "nome": "Asta",
+    "magia": "Anti-Magia ",
+    "ranking": "Cavaleiro"
 }
 ###
 PUT http://localhost:8080/membros?id=2
