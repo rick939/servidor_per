@@ -27,7 +27,6 @@ router.post('/', async (req, res) => {
     res.json({ msg: `Esquadrao chamado: ${esquadrao.nome} foi adicionado com sucesso!` })
 })
 
-
 router.delete('/', async (req, res) => {
     const id = req.query.id
     const squad = await Esquadrao.findByPk(id)

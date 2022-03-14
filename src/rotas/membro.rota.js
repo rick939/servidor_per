@@ -31,8 +31,9 @@ router.put('/', async (req, res) => {
     const id = req.query.id
     const membro = await Membros.findByPk(id)
     if (membro) {
-        membro.nome = req.body.nome
-        membro.magia = req.body.magia
+        membro.nome = req.body.nome;
+        membro.magia = req.body.magia;
+        membro.ranking = req.body.ranking;
         //O codigo não rodou a parte do Ranking
         // membro.ranking = req.boby.ranking
         await membro.save()

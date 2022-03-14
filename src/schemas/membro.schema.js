@@ -4,9 +4,9 @@ module.exports = {
         nome: {type: "string"},
         magia: {type: "string"},
         ranking: {type: "string"},
-        // esquadraoId: {type: 'integer'}
+        squadId: {type: 'integer'}
     },
-    required: ["nome", "magia","ranking"],
+    required: ["nome", "magia","ranking", "squadId"],
     additionalProperties: false
 }
 
