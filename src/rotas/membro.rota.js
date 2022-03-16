@@ -3,11 +3,11 @@ const express = require('express')
 // const res = require('express/lib/response')
 
 const router = express.Router()
-const { v4: uuidv4 } = require('uuid')
+// const { v4: uuidv4 } = require('uuid')
 const membroMid = require('../middleware/validarMembro.midd')
 
 // const membros = {}
-const { Membros } = require('../db/models')
+const { Membros, Esquadrao } = require('../db/models')
 
 router.post('/', membroMid)
 router.put('/', membroMid)
@@ -18,7 +18,7 @@ router.get('/', async (req, res) => {
 })
 
 router.get('/:id',async (req, res) => {
-    const membro = await Membros.findByPk(req.params.id)
+    const membro = await Membros.findByPk(req.params.id, [{model: Esquadrao}])
     res.json({membros: membro})
 })
 
